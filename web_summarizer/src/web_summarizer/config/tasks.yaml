@@ -1,0 +1,23 @@
+web_search_task:
+  description: >
+    The {topic} Web Search Specialist will perform a thorough web search about {topic}.
+    It will use available tools to find the most recent, accurate, and relevant information.
+    Focus will be on articles, research papers, or blogs that provide deep insights.
+  expected_output: >
+    A collection of text snippets, paragraphs, or summaries gathered from reliable
+    web sources about {topic}. Each piece of content should include enough detail
+    for understanding without requiring the original article.
+  agent: web_searcher
+
+web_summarizer_task:
+  description: >
+    The {topic} Summarization Specialist will review the content gathered by the web research agent
+    and produce a clear, concise summary that captures the most important points about {topic}.
+    The summary should highlight trends, key findings, and insights that emerged from the fetched data.
+    Avoid repetition and maintain factual accuracy.
+  expected_output: >
+    A well-structured summary of {topic} presented in short paragraphs or bullet points.
+    Ensure the summary is logically organized, easy to read, and contains only the
+    most essential insights. The final output should be formatted in markdown without '```'.
+  agent: web_summarizer
+
