@@ -1,54 +1,113 @@
-# WebSummarizer Crew
+🤖 CREWAI - Agentic Dashboard
 
-Welcome to the WebSummarizer Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
+A live AI agent dashboard built with Gradio that demonstrates Crewai agents working in real-time to summarize web topics. This project streams agent progress and a live timer while the summarization workflow executes, giving users a professional, dashboard-like experience.
 
-## Installation
+📝 Features
 
-Ensure you have Python >=3.10 <3.14 installed on your system. This project uses [UV](https://docs.astral.sh/uv/) for dependency management and package handling, offering a seamless setup and execution experience.
+Live Timer: Shows elapsed time while the AI agents are working.
 
-First, if you haven't already, install uv:
+Agent Progress: Displays the status of each agent with intuitive colored icons:
 
-```bash
-pip install uv
-```
+🔵 Working
 
-Next, navigate to your project directory and install the dependencies:
+⚪ Pending
 
-(Optional) Lock the dependencies and install them by using the CLI command:
-```bash
-crewai install
-```
-### Customizing
+🟢 Done
 
-**Add your `OPENAI_API_KEY` into the `.env` file**
+Real-Time Streaming: Results update dynamically as the workflow progresses.
 
-- Modify `src/web_summarizer/config/agents.yaml` to define your agents
-- Modify `src/web_summarizer/config/tasks.yaml` to define your tasks
-- Modify `src/web_summarizer/crew.py` to add your own logic, tools and specific args
-- Modify `src/web_summarizer/main.py` to add custom inputs for your agents and tasks
+Beautiful Interface:
 
-## Running the Project
+Modern card layout with rounded corners and shadow.
 
-To kickstart your crew of AI agents and begin task execution, run this from the root folder of your project:
+Custom fonts, colors, and styled Markdown.
 
-```bash
-$ crewai run
-```
+Professional, responsive design.
 
-This command initializes the web_summarizer Crew, assembling the agents and assigning them tasks as defined in your configuration.
+Easy Input: Users simply enter a topic and watch the agents work.
 
-This example, unmodified, will run the create a `report.md` file with the output of a research on LLMs in the root folder.
+⚡ Demo
 
-## Understanding Your Crew
+When a user enters a topic, the interface shows:
 
-The web_summarizer Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
+A live timer updating every second.
 
-## Support
+Agent progress in Markdown with emojis.
 
-For support, questions, or feedback regarding the WebSummarizer Crew or crewAI.
-- Visit our [documentation](https://docs.crewai.com)
-- Reach out to us through our [GitHub repository](https://github.com/joaomdmoura/crewai)
-- [Join our Discord](https://discord.com/invite/X4JWnZnxPb)
-- [Chat with our docs](https://chatg.pt/DWjSBZn)
+Summarized result displayed in a styled, readable format.
 
-Let's create wonders together with the power and simplicity of crewAI.
+🛠️ Installation
+
+Clone the repository:
+
+git clone https://github.com/yourusername/crewai-dashboard.git
+cd crewai-dashboard
+
+
+Create a virtual environment (recommended):
+
+python -m venv .venv
+source .venv/bin/activate    # On Windows: .venv\Scripts\activate
+
+
+Install dependencies:
+
+pip install -r requirements.txt
+
+
+Dependencies include:
+
+gradio – for the interface
+
+web_summarizer – for Crewai workflow execution
+
+🚀 Usage
+
+Run the dashboard locally:
+
+python main.py
+
+
+Open the link displayed in your terminal (e.g., http://127.0.0.1:7860).
+
+Enter a topic in the input box.
+
+Watch live timer and agents progress while the summary is being generated.
+
+🎨 Customization
+
+CSS Styling: Modify the custom_css in main.py to change fonts, colors, or layout.
+
+Agents: Replace simulated agent steps with real Crewai agent hooks.
+
+Timer Format: Customize the timer display in webrun_stream for MM:SS format or progress bars.
+
+📂 Project Structure
+crewai-dashboard/
+│
+├── main.py           # Main Gradio interface and workflow
+├── requirements.txt  # Python dependencies
+├── README.md         # This file
+└── web_summarizer/   # Crewai summarizer module
+
+💡 Future Enhancements
+
+Add real-time progress bars for each agent.
+
+Integrate live streaming of agent logs for full transparency.
+
+Deploy to Heroku / AWS / Streamlit Cloud for online access.
+
+Include analytics dashboard showing multiple topics and agent performance.
+
+⚖️ License
+
+This project is licensed under the MIT License – see LICENSE
+ for details.
+
+👨‍💻 Author
+
+Durga Prasad 
+📧 Email: durga.pras10@gmail.com
+
+💻 GitHub: [https://github.com/yourusername](https://github.com/dpgithubRepo)
