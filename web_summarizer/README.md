@@ -2,6 +2,9 @@
 
 A live AI agent dashboard built with Gradio that demonstrates Crewai agents working in real-time to summarize web topics. This project streams agent progress and a live timer while the summarization workflow executes, giving users a professional, dashboard-like experience.
 
+<img width="886" height="866" alt="image" src="https://github.com/user-attachments/assets/052225a6-0f4b-4cf1-ac10-b57207b82272" />
+
+
 📝 Features
 
 Live Timer: Shows elapsed time while the AI agents are working.
